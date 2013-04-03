@@ -1,0 +1,10 @@
+﻿
+Washing_machine(start, clock,reset,cold,warm,hot,extra_rinse,full,empty,timer_bus,stage_bus)
+/*
+* start, clock, reset, cold, warm, hot, and extra_rinse are input buttons
+* full, and empty are the sensors
+* timer_bus is a 4 bit bus (0 to 15) holding the counter value, they will be passed to a binary to 7 seg
+* 	 decoder.
+* stage_bus is a 4 bit bus (0 to 12) holding what stage the wash is on currently, will also be passed to
+*	a binary to 7 seg decoder
+*/
