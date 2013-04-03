@@ -6,3 +6,6 @@ db/
 
 # ingore bak files by quartus
 *.bak
+
+#ignore xournal files
+*.xoj
