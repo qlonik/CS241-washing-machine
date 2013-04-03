@@ -1,0 +1,2 @@
+module Washing-machine();
+endmodule
