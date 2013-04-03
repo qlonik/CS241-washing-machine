@@ -8,3 +8,5 @@ Washing_machine(start, clock,reset,cold,warm,hot,extra_rinse,full,empty,timer_bu
 * stage_bus is a 4 bit bus (0 to 12) holding what stage the wash is on currently, will also be passed to
 *	a binary to 7 seg decoder
 */
+
+
