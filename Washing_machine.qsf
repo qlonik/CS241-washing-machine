@@ -50,3 +50,6 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE CountdownTimer10.v
+set_global_assignment -name VERILOG_FILE BINtoDual7Seg.v
+set_global_assignment -name VERILOG_FILE Washing_machine.v
