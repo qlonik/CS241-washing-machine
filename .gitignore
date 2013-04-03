@@ -3,3 +3,6 @@ db/
 
 # ignore tmp files by ubuntu system
 *~
+
+# ingore bak files by quartus
+*.bak
