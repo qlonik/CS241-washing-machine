@@ -1,0 +1,5 @@
+# Ignore db folder by quartus
+db/
+
+# ignore tmp files by ubuntu system
+*~
