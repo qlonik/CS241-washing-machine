@@ -1,4 +1,15 @@
-﻿
+﻿TODO:
+BINto7seg_decoder (nikita)
+washing_machine (unassigned)
+wash_control (unassigned)
+cycle_counter (unassigned)
+wash_decoder (unassigned) 
+advance_mux (unassigned)
+valve_cntrl (unassigned)
+wash_timer (unassigned)
+rinse_timer (unassigned)
+spin_timer (unassigned) 
+
 Washing_machine(start, clock,reset,cold,warm,hot,extra_rinse,full,empty,timer_bus,stage_bus)
 /*
 * start, clock, reset, cold, warm, hot, and extra_rinse are input buttons
