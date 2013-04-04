@@ -50,7 +50,7 @@ wash_decoder (bus_in,bus_out) [NIKITA, COMPLETE]
  
 advance_mux (unassigned)
 
-valve_cntrl(bus_in,cold_override,bus_out) [CORY, IN PROGRESS]
+valve_cntrl(bus_in,cold_override,bus_out) [CORY, COMPLETE]
 	bus_in = 3 bit, temp select (cold,warm,hot)
 	cold_override = cold_override select
 	bus_out = 2 bit, cold valve, hot valve 
