@@ -9,7 +9,7 @@ FORMAT:
 	main bus in should be labeled bus_in, 
 	specific inputs should be labeled accordingly
 	main bus out should be labeled bus_out,
-	specific outoput should be labeled accordingly
+	specific outputs should be labeled accordingly
 	
 	name_of_signal = description of siganl
 	name_of_bus = number of bits in bus, description
@@ -44,10 +44,10 @@ wash_control (bus_in,bus_out,timer_bus,stage_bus) [JASON, COMPLETE]
 	timer_bus=4bit, timer display control
 	stage_bus=4bit, stage display control
 
-cycle_counter (next,extra_rinse,reset,cycle_id) [NIKITA, IN PROGRESS]
+cycle_counter (next,extra_rinse,reset,cycle_id) [NIKITA, COMPLETE]
 	next=next signal
 	extra_rinse=extra rinse signal
-	reset=reset trigger
+	reset=reset trigger, positive logic, resets on binary 1
 	cycle_id=4bit output vector, value of current state
 
 cycle_control () [unassigned]
