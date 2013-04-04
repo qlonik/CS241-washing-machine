@@ -3,7 +3,7 @@ BINto7seg_decoder (nikita) done
 washing_machine (unassigned)
 wash_control (unassigned)
 cycle_counter (unassigned)
-wash_decoder (unassigned) 
+wash_decoder (unassigned) done 
 advance_mux (unassigned)
 valve_cntrl (unassigned)
 wash_timer (unassigned) done
