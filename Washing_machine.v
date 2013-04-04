@@ -3,9 +3,10 @@ module Washing_machine(start,clock,reset,cold,warm,hot,extra_rinse,full,empty,
 	
 	input start,clock,reset,cold,warm,hot,extra_rinse,full,empty;
 	output agitate,spin,pump,alert,cold_valve,hot_valve,timer_display,stage_display;
-	
-	wire stage_bus,timer_bus,cold_override,wash_done,rinse_done,spin_done,cntrl_unit_bus_out;
-/* MOST OF THE WIRES ACTUALLY BELONG IN THE WASH_CONTROL
+	output[13:0] timer_display,stage_display;
+	wire[0:5] cntrl_unit_bus_out;	
+	wire[3:0] stage_bus,timer_bus;
+/* 
  * start = start button
  * reset = reset button
  * cold, warm, hot = temp select buttons
@@ -14,10 +15,6 @@ module Washing_machine(start,clock,reset,cold,warm,hot,extra_rinse,full,empty,
  * agitate,spin,pump = signals for motors, and pump
  * alert = signal for completion alert 
  * cold_valve, hot_valve = signals for cold and hot water valves
- * cold_override = wire to signal cold water over ride (for rinse)
- * wash_done = signal when wash is complete (sent by wash_timer)
- * rinse_done = signal when rinse is done (sent by rinse_timer)
- * spin_done = signal when spin is done (sent by spin_timer)
  * timer_bus =4 bit signal sent to BINtoDual7Seg decoder 
  * stage_bus =see timer_bus
  * timer_display = signals sent to 7 seg displays from seg decoder
