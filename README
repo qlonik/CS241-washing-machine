@@ -16,21 +16,53 @@ FORMAT:
 
  
 BINto7seg_decoder (nikita) done
-washing_machine (Jason)
+
+washing_machine (start,clock,reset,cold,warm,hot,extra_rinse,full,empty,agitate,spin,pump,alert,cold_valve,hot_valve,timer_display,stage_display) [JASON, COMPLETE]
+	start=start signal
+	clock=clock signal
+	reset=reset signal
+	cold=cold signal
+	warm=warm signal
+	hot=hot signal
+	extra_rinse=extra rinse signal
+	full=full sensor
+	empty=empty sensor
+	agitate=agitate motor control
+	spin=spin motor control
+	pump=pump motor control
+	alert=alert control
+	cold_valve=valve control
+	hot_valve=valve control
+	timer_display=14bit,7seg control
+	stage_display=14bit,7seg control
+
 wash_control (bus_in,bus_out,timer_bus,stage_bus) [JASON, IN PROGRESS]
 	bus_in = 9 bit, human input from wash machine
 	bus_out= 6 bit, motor,valve,alert control
 	timer_bus=4bit, timer display control
 	stage_bus=4bit, stage display control
+
 cycle_counter (unassigned)
-wash_decoder (nikita) done 
+
+wash_decoder (bus_in,bus_out) [NIKITA, COMPLETE]
+	bus_in=4bit,cycle ID
+	bus_out=13bit,cycle select
+ 
 advance_mux (unassigned)
+
 valve_cntrl(bus_in,cold_override,bus_out) [CORY, IN PROGRESS]
 	bus_in = 3 bit, temp select (cold,warm,hot)
 	cold_override = cold_override select
 	bus_out = 2 bit, cold valve, hot valve 
-wash_timer (unassigned) done
-rinse_timer (unassigned) done
-spin_timer (unassigned) done
+
+MUX2to3(bus_in,d0,d1,d2) [JASON, COMPLETE]
+	bus_in=2bit, timer select
+	d0=wash_timer start
+	d1=rinse_timer start
+	d2=spin_timer start
+
+wash_timer () [COMPLETE]
+rinse_timer () [COMPLETE]
+spin_timer () [COMPLETE]
 
 
