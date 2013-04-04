@@ -1,7 +1,16 @@
 CS241 washing machine project
 
 
-make the three timers, 
--rinse timer
--wash timer
--spin timer
+TODO:
+BINto7seg_decoder (nikita) done
+washing_machine (Jason)
+wash_control (unassigned)
+cycle_counter (unassigned)
+wash_decoder (nikita) done 
+advance_mux (unassigned)
+valve_cntrl (Cory)
+wash_timer (unassigned) done
+rinse_timer (unassigned) done
+spin_timer (unassigned) done
+
+
