@@ -1,9 +1,9 @@
 ﻿TODO:
-BINto7seg_decoder (nikita) done
+BINto7seg_decoder (Nikita) done
 washing_machine (Jason)
 wash_control (unassigned)
-cycle_counter (unassigned)
-wash_decoder (nikita) done 
+cycle_counter (Nikita)
+wash_decoder (Nikita) done 
 advance_mux (unassigned)
 valve_cntrl (Cory)
 wash_timer (unassigned) done
