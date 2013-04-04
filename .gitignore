@@ -6,3 +6,6 @@
 
 #ignore xournal files
 *.xoj
+
+#ignore backups
+*.bak
