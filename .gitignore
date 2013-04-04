@@ -7,5 +7,5 @@
 #ignore xournal files
 *.xoj
 
-#ignore backups
-*.bak
+#ignore swap files
+*.sw*
