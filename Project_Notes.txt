@@ -1,14 +1,14 @@
 ﻿TODO:
-BINto7seg_decoder (nikita)
+BINto7seg_decoder (nikita) done
 washing_machine (unassigned)
 wash_control (unassigned)
 cycle_counter (unassigned)
-wash_decoder (unassigned) 
+wash_decoder (unassigned) done 
 advance_mux (unassigned)
 valve_cntrl (unassigned)
-wash_timer (unassigned)
-rinse_timer (unassigned)
-spin_timer (unassigned) 
+wash_timer (unassigned) done
+rinse_timer (unassigned) done
+spin_timer (unassigned) done
 
 Washing_machine(start, clock,reset,cold,warm,hot,extra_rinse,full,empty,timer_bus,stage_bus)
 /*
