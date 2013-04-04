@@ -36,19 +36,25 @@ washing_machine (start,clock,reset,cold,warm,hot,extra_rinse,full,empty,agitate,
 	timer_display=14bit,7seg control
 	stage_display=14bit,7seg control
 
-wash_control (bus_in,bus_out,timer_bus,stage_bus) [JASON, IN PROGRESS]
+wash_control (bus_in,bus_out,timer_bus,stage_bus) [JASON, COMPLETE]
 	bus_in = 9 bit, human input from wash machine
 	bus_out= 6 bit, motor,valve,alert control
 	timer_bus=4bit, timer display control
 	stage_bus=4bit, stage display control
 
-cycle_counter (unassigned)
+cycle_counter (next,extra_rinse,reset,cycle_id) [NIKITA, IN PROGRESS]
+	next=next signal
+	extra_rinse=extra rinse signal
+	reset=reset trigger
+	cycle_id=4bit output vector, value of current state
+
+cycle_control () [unassigned]
 
 wash_decoder (bus_in,bus_out) [NIKITA, COMPLETE]
 	bus_in=4bit,cycle ID
 	bus_out=13bit,cycle select
  
-advance_mux (unassigned)
+advance_mux () [DEPRICATED/UNUSED see cycle_control]
 
 valve_cntrl(bus_in,cold_override,bus_out) [CORY, COMPLETE]
 	bus_in = 3 bit, temp select (cold,warm,hot)
@@ -61,7 +67,14 @@ MUX2to3(bus_in,d0,d1,d2) [JASON, COMPLETE]
 	d1=rinse_timer start
 	d2=spin_timer start
 
-wash_timer () [COMPLETE]
+wash_timer (clock,reset,start_timer,bus_out,pause,active,done) [COMPLETE]
+	clock=clock input;
+	reset=timer reset input;
+	start_timer=timer start input;
+	bus_out = 4bit, current value of timer
+	pause=pause timer(UNUSED)
+	active=timer state(UNUSED)
+	done=signal if timer has reached max count
 rinse_timer () [COMPLETE]
 spin_timer () [COMPLETE]
 
