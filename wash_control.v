@@ -46,7 +46,7 @@ module wash_control(bus_in, bus_out, timer_bus, stage_bus);
 	
 	cycle_counter(next, bus_in[3], bus_in[7], stage_bus);
 	
-	cycle_control({bus_in[8], bus_in[7], bus_in[3], bus_in[1], bus_in[0]},
+	cycle_control({bus_in[8], bus_in[7], bus_in[1], bus_in[0]},
 		timer_done, stage_bus, output_control1, next, timer_select, valve_enable);
 	
 	MUX2to3(timer_select, wash_st, rinse_st, spin_st);
