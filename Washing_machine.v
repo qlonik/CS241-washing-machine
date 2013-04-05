@@ -2,7 +2,7 @@ module Washing_machine(start,clock,reset,cold,warm,hot,extra_rinse,full,empty,
 	agitate,spin,pump,alert,cold_valve,hot_valve,timer_display,stage_display);
 	
 	input start,clock,reset,cold,warm,hot,extra_rinse,full,empty;
-	output agitate,spin,pump,alert,cold_valve,hot_valve,timer_display,stage_display;
+	output agitate,spin,pump,alert,cold_valve,hot_valve;
 	output[13:0] timer_display,stage_display;
 	wire[5:0] cntrl_unit_bus_out;	
 	wire[3:0] stage_bus,timer_bus;
