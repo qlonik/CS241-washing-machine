@@ -1,11 +1,11 @@
 module wash_control(bus_in,bus_out,timer_bus,stage_bus);
 
-	input[0:8] bus_in;
+	input[8:0] bus_in;
 	output[3:0] timer_bus, stage_bus;
-	output[0:5] bus_out; 
+	output[5:0] bus_out; 
 	wire[3:0] current_state;
 	wire[12:0] current_state_cmd;
-	wire[0:1] valves,valve_signal;
+	wire[1:0] valves,valve_signal;
 	wire cold_override,next,timer_done,output_control1,wash_st,rinse_st,spin_st,garbage,valve_enable;
 /*	
 bus_in=9bit,signal forwarding from wash machine
