@@ -1,4 +1,4 @@
-module cycle_control(bus_in,timer_done,stage_bus,output_control1,next,timer_select,valve_enablei,cold_override);
+module cycle_control(bus_in,timer_done,stage_bus,output_control1,next,timer_select,valve_enable,cold_override);
 	input[4:0] bus_in;
 	input[3:0] stage_bus;
 	input timer_done;
