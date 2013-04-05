@@ -27,7 +27,7 @@ valve_signal=signal for vales taking into account the enable
 */
 	//valves have to be linked to bus_out[5:6]
 	//bus_in forwards cold,warm,hot to valve control
-	valve_control(bus_in[6:4],cold_override,valves);
+	valve_control(bus_in[4:6],cold_override,valves);
 	cycle_counter(next,bus_in[3],bus_in[7],stage_bus);
 	cycle_control({bus_in[8],bus_in[7],bus_in[3],bus_in[1],bus_in[0]},timer_done,stage_bus,output_control1,next,timer_select,valve_enable);
 	MUX2to3(timer_select,wash_st,rinse_st,spin_st);
