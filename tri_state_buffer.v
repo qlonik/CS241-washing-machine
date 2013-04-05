@@ -1,6 +1,6 @@
 // tri-state buffer
 
- module tri_buf (a,b,enable);
+ module tri_state_buffer (a,b,enable);
     input a;
     output b;
     input enable;
