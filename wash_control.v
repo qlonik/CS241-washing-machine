@@ -29,7 +29,7 @@ valve_signal=signal for vales taking into account the enable
 	//bus_in forwards cold,warm,hot to valve control
 	valve_control(bus_in[3:5],cold_override,valves);
 	cycle_counter(next,bus_in[5],bus_in[1],stage_bus);
-	cycle_control({bus_in[0],bus_in[1],bus_in[2],bus_in[3],bus_in[4],bus_in[5],bus_in[7],bus_in[8]},timer_done,stage_bus,output_control1,next,timer_select,valve_enable);
+	cycle_control({bus_in[0],bus_in[1],bus_in[5],bus_in[7],bus_in[8]},timer_done,stage_bus,output_control1,next,timer_select,valve_enable);
 	MUX2to3(timer_select,wash_st,rinse_st,spin_st);
 	wash_timer(bus_in[6],bus_in[1],wash_st,timer_bus,1'b0,garbage,timer_done);
 	rinse_timer(bus_in[6],bus_in[1],rinse_st,timer_bus,1'b0,garbage,timer_done);
