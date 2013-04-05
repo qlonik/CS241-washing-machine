@@ -1,5 +1,5 @@
 module cycle_control(bus_in,timer_done,stage_bus,output_control1,next,timer_select,valve_enable,cold_override);
-	input[4:0] bus_in;
+	input[3:0] bus_in;
 	input[3:0] stage_bus;
 	input timer_done;
 	output[3:0] output_control1;
@@ -15,7 +15,7 @@ always@(posedge bus_in or posedge timer_done or posedge stage_bus)
 			cold_override=1'b0;
 			timer_select=2'b00;
 			output_control1=4'b0000;
-			next=bus_in[8];
+			next=bus_in[3];
 			end
 		//PREWASH	
 		4'b0001:begin
