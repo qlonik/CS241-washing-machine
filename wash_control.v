@@ -37,4 +37,4 @@ valve_signal=signal for vales taking into account the enable
 	tri_state_buffer(valves[0],valve_signal[0],valve_enable);
 	tri_state_buffer(valves[1],valve_signal[1],valve_enable);
 	assign
-		bus_out={output_control1,valve_signal;
+		bus_out={output_control1,valve_signal};
