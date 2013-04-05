@@ -4,6 +4,8 @@ module cycle_control(bus_in,timer_done,stage_bus,output_control1,next,timer_sele
 	input timer_done;
 	output[3:0] output_control1;
 	output next,timer_select,valve_enable,cold_override;
+	reg[3:0] output_control1;
+	reg next,timer_select,valve_enable,cold_override;
 	
 always@(posedge bus_in or posedge timer_done or posedge stage_bus)
 	case(stage_bus)
