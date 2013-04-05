@@ -8,9 +8,22 @@ module cycle_control(bus_in,timer_done,stage_bus,output_control1,next,timer_sele
 always@(posedge bus_in or posedge timer_done or posedge stage_bus)
 	case(stage_bus)
 		4b'0000: next=bus_in[4];
-		4b'0001:
-		4b'0010:
-		4b'0011:
+		4b'0001: valve_enable=1b'1; 
+			 if(bus_in[1]/*full*/) begin //if full
+				valve_enable=1b'0; // disable valves
+			 	next=1b'1;
+				end
+		4b'0010: timer_select=2b'01;
+			 output_control1[3]=1b'1;//turn on agitator
+			 if(timer_done==1b'1)begin // if timer expires
+				output_control1[3]=1b'0; //turn of agitator
+				next=1b'1;
+				end 
+		4b'0011: output_control1[1]=1b'1; //turn on pump
+			 if(bus_in[0]/*empty*/)begin // if empty
+				output_control1[1]=1b'0; // turn off pump
+				next=1b'1;
+				end
 		4b'0100:
 		4b'0101:
 		4b'0110:
@@ -20,7 +33,7 @@ always@(posedge bus_in or posedge timer_done or posedge stage_bus)
 		4b'1010:
 		4b'1011:
 		4b'1100:
-
+	endcase
 		
 
 
