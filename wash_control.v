@@ -55,8 +55,8 @@ module wash_control(bus_in, bus_out, timer_bus, stage_bus);
 	rinse_timer(bus_in[2], bus_in[7], rinse_st, timer_bus, 1'b0 ,garbage, timer_done);
 	spin_timer(bus_in[2], bus_in[7], rinse_st, timer_bus, 1'b0, garbage, timer_done);
 	
-	tri_state_buffer valve1(valves[0], valve_signal[0], valve_enable),
-			valve2(valves[1], valve_signal[1], valve_enable);
+	tri_state_buffer(valves[0], valve_signal[0], valve_enable);
+	tri_state_buffer(valves[1], valve_signal[1], valve_enable);
 	
 	assign bus_out = {output_control1, valve_signal};
 
