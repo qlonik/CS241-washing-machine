@@ -6,7 +6,7 @@ module wash_control(bus_in,bus_out,timer_bus,stage_bus);
 	wire[3:0] current_state;
 	wire[12:0] current_state_cmd;
 	wire[1:0] valves,valve_signal;
-	wire cold_override,next,timer_done,output_control1,wash_st,rinse_st,spin_st,garbage,valve_enable;
+	wire cold_override,next,timer_done,output_control1,wash_st,rinse_st,spin_st,garbage,valve_enable,timer_select;
 /*	
 bus_in=9bit,signal forwarding from wash machine
 bus_out=6bit,agitator,spin,pump,alert,cold_valve,hot_valve (IN THAT ORDER)
