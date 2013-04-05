@@ -26,7 +26,7 @@ module Washing_machine(start,clock,reset,cold,warm,hot,extra_rinse,full,empty,
 	//accept the two display buses that drive the displays, 
 	// all remaining values are in a 6 bit vector.
 	//	that is all the engines, alarm, pump, valves.
-	wash_control({start,clock,reset,cold,warm,hot,extra_rinse,full,empty},timer_bus,stage_bus,cntrl_unit_bus_out);
+	wash_control({start,restart,cold,warm,hot,extra_rinse,clock,full,empty},timer_bus,stage_bus,cntrl_unit_bus_out);
 	BINtoDual7Seg(timer_bus,timer_display);
 	BINtoDual7Seg(stage_bus,stage_display);	
 	
