@@ -8,9 +8,9 @@ module valve_control(bus_in,cold_override,bus_out);
 * bus_out[0] is cold valve
 * bus_out[1] is hot valve
 *
-* bus_in[0] is cold select
+* bus_in[2] is cold select
 * bus_in[1] is warm select
-* bus_in[2] is hot select
+* bus_in[0] is hot select
 */
 
 /*
@@ -21,7 +21,7 @@ module valve_control(bus_in,cold_override,bus_out);
 */
 
 assign
-	bus_out[0] = cold_override | bus_in[0] | bus_in[1],
-	bus_out[1] = ~cold_override & (bus_in[1] | bus_in[2]);
+	bus_out[0] = cold_override | bus_in[2] | bus_in[1],
+	bus_out[1] = ~cold_override & (bus_in[1] | bus_in[0]);
 
 endmodule
